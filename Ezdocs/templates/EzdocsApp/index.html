@@ -1,0 +1,16 @@
+
+
+
+{% extends "EzdocsApp/base.html" %}
+{% block body_block %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to Easy Docs</h1>
+    {% if user.is_authenticated %}
+        <h2>Hello {{ user.username }}</h2>
+    {% else %}
+        <h5>Register and Login to get access to easy to understand and up to date software documentation.</h5>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
